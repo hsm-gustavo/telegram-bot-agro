@@ -12,55 +12,55 @@ bot = telebot.TeleBot(BOT_TOKEN)
 @bot.message_handler(commands=['sobre'])
 def sobre(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
-    texto = f"""{json["sobre"]}"""
+    texto = json['sobre']
     bot.send_message(message.chat.id, texto)
 
 @bot.message_handler(commands=['info'])
 def info(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
-    texto = f"""{json["info"]}"""
+    texto = json['info']
     bot.send_message(message.chat.id, texto)
 
 @bot.message_handler(commands=['docentes'])
 def docentes(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
-    texto = f"""{json["docentes"]}"""
+    texto = json['docentes']
     bot.send_message(message.chat.id, texto)
 
 @bot.message_handler(commands=['disciplinas'])
 def disciplinas(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
-    texto = f"""{json["disciplinas"]}"""
+    texto = json['disciplinas']
     bot.send_message(message.chat.id, texto)
 
 @bot.message_handler(commands=['geral'])
 def geral(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
-    texto = f"""{json["geral"]}"""
+    texto = json['geral']
     bot.send_message(message.chat.id, texto)
     
 @bot.message_handler(commands=['matricula', 'certidao', 'ementas', 'historico'])
 def sistema(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
-    texto = f"""{json["sistema"]}"""
+    texto = json['sistema']
     bot.send_message(message.chat.id, texto)
 
 @bot.message_handler(commands=['assinatura'])
 def assinatura(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
-    texto = f"""{json["assinatura"]}"""
+    texto = json['assinatura']
     bot.send_message(message.chat.id, texto)
 
 @bot.message_handler(commands=['trancar'])
 def trancar(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
-    texto = f"""{json["trancar"]}"""
+    texto = json['trancar']
     bot.send_message(message.chat.id, texto)
 
 @bot.message_handler(commands=['rematricula'])
 def rematricula(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
-    texto = f"""{json["rematricula"]}"""
+    texto = json['rematricula']
     bot.send_message(message.chat.id, texto)
 
 @bot.message_handler(commands=['buscar'])
@@ -82,14 +82,14 @@ def busca2(message):
 @bot.message_handler(commands=['horarios'])
 def horario(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
-    texto = f"""{json["horarios"]}"""
+    texto = json['horarios']
     bot.send_message(message.chat.id, texto)
 
 
 @bot.message_handler(commands=['redirecionar'])
 def redirecionar(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
-    texto = f"""{json["redirecionar"]}"""
+    texto = json['redirecionar']
     bot.send_message(message.chat.id, texto)
 
 @bot.message_handler(func=lambda message: True)
