@@ -2,6 +2,9 @@ import openai
 import telebot
 from os import getenv
 from requests import get as requests_get
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 BOT_TOKEN = getenv("BOTAPI_TOKEN")
