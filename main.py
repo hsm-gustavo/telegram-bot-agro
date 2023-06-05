@@ -8,7 +8,8 @@ load_dotenv()
 
 
 BOT_TOKEN = getenv("BOTAPI_TOKEN")
-openai.api_key = getenv("OPENAI_KEY")
+openai.api_key = getenv("OPENAI_API_KEY")
+openai.organization = getenv("OPENAI_ORG")
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -77,7 +78,7 @@ def busca2(message):
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt=prompt + " Máximo tamanho de resposta: 30 palavras. Se necessário informações adicionais Campus: UFAL ARAPIRACA, Curso: AGRONOMIA",
-        temperature=1,
+        temperature=0.2,
         max_tokens=300,
     )
     bot.send_message(message.chat.id, response.choices[0].text)
