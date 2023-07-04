@@ -126,7 +126,7 @@ Escolha uma opção para continuar (clique no item ou digite o comando):
 
     Clique em uma das opções acima."""
     # placeholder for any message
-    bot.send_photo(message.chat.id, photo=open("logo.jpeg", "rb"), caption=texto)
+    bot.send_photo(message.chat.id, photo=open("logo.jpg", "rb"), caption=texto)
     
 
 # creates an infinite loop for the bot to listen to messages
