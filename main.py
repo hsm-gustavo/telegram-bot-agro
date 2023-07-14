@@ -73,6 +73,12 @@ def dispensa(message):
     texto = json['dispensa']
     bot.send_message(message.chat.id, texto)
 
+@bot.message_handler(commands=['calendario'])
+def calendario(message):
+    json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
+    texto = json['calendario']
+    bot.send_message(message.chat.id, texto)
+
 @bot.message_handler(commands=['buscar'])
 def busca(message):
     bot.send_message(message.chat.id, "Digite sua dúvida:")
