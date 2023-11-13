@@ -99,7 +99,7 @@ def busca2(message):
 def horario(message):
     json = requests_get("https://api.npoint.io/e72dba775c7bf86ed85d").json()
     texto = json['horarios']
-    bot.send_message(message.chat.id, texto)
+    bot.send_message(message.chat.id, texto, "MarkdownV2")
 
 
 @bot.message_handler(commands=['redirecionar'])

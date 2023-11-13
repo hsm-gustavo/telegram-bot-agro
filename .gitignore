@@ -1,2 +1,5 @@
 playground.py
 .env
+venv/
+.vscode/
+requirements.txt
